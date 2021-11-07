@@ -1,0 +1,33 @@
+<main class="flex-shrink-0 mb-5 mt-2">
+
+  <div class="container">
+    <div class="bg-light p-5 rounded">
+      <h1 class="d-flex justify-content-between">{{title}}
+        <a href="/afegir_casco" class="btn btn-dark">Añadir</a>
+
+      </h1>
+<div class="row row-cols-1 row-cols-md-4  g-4">
+        {{#if cascoss}}
+            {{#each cascoss}}
+                <div class="col">
+              <div class="card">
+              <img src="assets/img/{{photo}}" class="card-img-top" alt="..." width="120px" height="200px" />
+                <div class="card-body">
+                  <h5 class="card-title d-flex justify-content-center">{{nameCasco}} - {{year}}</h5>
+                  <hr>
+                 <center> <p class="card-text">{{price}}€</p>
+                  <a href="/buy-item/{{@key}}" class="btn btn-success" onclick="eliminar_producto"()>Comprar</a></center>
+                </div>
+              </div>
+              </div>
+
+            {{/each}}
+          </ul>
+        {{else}}
+         <p>no hay productos</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+</main>
